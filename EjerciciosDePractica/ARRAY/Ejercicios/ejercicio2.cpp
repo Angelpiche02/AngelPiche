@@ -6,25 +6,20 @@ using namespace std;
 
 int main (){
 
-    //Array
-    int number [5] = {1,2,3,4,5}; 
+    int number [] = {1,2,3,4,5}; 
+    int n = sizeof(number) / sizeof(number[0]);
 
-    //Show the current array
-    cout <<"Content of the array: "<< endl;
+    for (int i = 0; i < n / 2 ; i++){
 
-    for (int i = 0; i < 5; i++){
+        int temporal = number[i];
 
-        cout <<"Array: "<< number[i]<< endl;
+        number[i] = number [n - 1 - i];
+
+        number [n - 1 - i] = temporal;
     }
-cout <<"----------------------------------------"<< endl;
-
-    cout <<"-----Inverted array------"<< endl;
-
-    //Inicializar desde el final con la condicion de i >=0 para mostrar el array invertido
-    for (int i = 4; i >= 0; i--){
-
-        //Show the inverted array
-        cout <<"Inverted array: "<< number [i]<< endl;
+    
+    for(int i = 0; i < n; i++){
+        cout<<number[i]<<" ";
     }
 
 

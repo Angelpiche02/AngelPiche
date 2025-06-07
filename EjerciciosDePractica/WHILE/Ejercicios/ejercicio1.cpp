@@ -6,16 +6,20 @@ using namespace std;
 
 int main(){
 
-    int fibonacci[10];
+    int a = 0, b = 1, fibo = 0, limite = 0;
 
-    fibonacci [0] = 0;
-    fibonacci [1] = 1;
 
-    while (fibonacci[0] < fibonacci [10]){
+    cout << " " << a;
 
-        fibonacci[] = fibonacci [0] + fibonacci []
+    while (15 > limite){
+        
+        fibo = a + b;
+        a = b;
+        b = fibo;
+
+        cout <<" "<< a;
+        limite ++;
     }
-
 
     return 0;
 }

@@ -24,7 +24,8 @@ int main (){
             cin >> contrasena2;
         }
     }
-cout <<"Contrasena correcta"<< endl;
+    
+    cout <<"Contrasena correcta"<< endl;
 
     return 0;
 }

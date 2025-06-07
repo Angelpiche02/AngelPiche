@@ -6,28 +6,31 @@ using namespace std;
 
 int main(){
 
-    int intentos, a;
+    int intentos = 1, intentosMax = 5, num;
     int numero = 32;
 
     cout <<"ADIVINANZA! Escriba un numero del 1 al 50 para ver si le atina! Tiene 5 intentos"<< endl;
-    cin >> a;
+    cin >> num;
 
-
-    while (a != numero)
-    {
-        for (int i = 0; i < 5; i++){
-
-        if (a != numero){
-            cout <<"El numero no es correcto, ingrese otro"<< endl;
-
-            cin >> i;
-            }
-            
-            else {}
-        } 
-
+    if(num < 1 || num > 50){
+        cout <<"Error"<< endl;
+        return 0;
     }
 
-    cout <<"Has adivinado el numero!!!"<< endl;
+    while (intentos < intentosMax){
+
+        if(num == numero){
+            cout <<"Has adivinado!!"<< endl;
+            return 0;
+        }
+        else{
+        cout <<"Intentalo de nuevo, te quedan "<< intentosMax - intentos <<" intentos" <<endl;
+        cin >> num;
+        intentos ++;
+        }
+            
+    }
+         
+    cout <<"Perdiste"<< endl;
     return 0;
 }
